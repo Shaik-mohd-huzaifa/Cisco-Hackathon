@@ -1,5 +1,5 @@
 const Inital_state = {
-    summary: "",
+    summary:{},
     summaryToggle: false
 }
 
@@ -20,9 +20,10 @@ export const ToggleSummaryModal = (payload) => {
 export const SummarizationReducer = (state = Inital_state, action) => {
     const {type, payload} = action
     if(type == "update/@summary"){
+        console.log(payload)
         return {
             ...state,
-            summary: payload
+            summary: payload,
         }
     }else if(type == "toggle/@summary"){
         return {
@@ -34,6 +35,6 @@ export const SummarizationReducer = (state = Inital_state, action) => {
     return state
 }
 
-export const SummarySelector = (state) => state.Summary.summary
+export const SummarySelector = (state) => state.Summary.summary;
 
 export const SummaryToggleSelector = (state) => state.Summary.summaryToggle;

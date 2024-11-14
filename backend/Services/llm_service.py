@@ -6,10 +6,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+TOGETHER_AI_ENDPOINT = "https://api.together.xyz/v1"
+TOGETHER_AI_API_KEY = "bf5252e1770e8558b08dfd2952fa5a9d0e315b84e6b01ff405746d8a26c068b2"
+
 
 LLM = ChatOpenAI(
-    base_url=os.getenv("TOGETHER_AI_ENDPOINT"),
-    api_key=os.getenv("TOGETHER_AI_API_KEY"),
+    base_url="https://api.together.xyz/v1",
+    api_key="bf5252e1770e8558b08dfd2952fa5a9d0e315b84e6b01ff405746d8a26c068b2",
     model="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
     max_tokens=3000,
 )
@@ -18,7 +21,7 @@ LLM = ChatOpenAI(
 template = """
     You are a Assistant who summarizes the Packet Structure given to you. Highlight the important values present in the packet structure and do not list the values instead summarize what's happening in this packet. And no other talk just summarize and explain
     
-    This should be the format: 
+    This should be the format Refer the Format: 
     This packet is a Ethernet frame that contains the following information:
 
 - It is an IP packet with a destination address of 192.168.1.100 and a source address of 192.168.1.1.
