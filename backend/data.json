@@ -1,0 +1,230 @@
+[
+  {
+    "Ethernet": {
+      "dst": "34:29:8f:70:75:96",
+      "src": "08:61:95:de:65:0d",
+      "type": "IPv4"
+    },
+    "IP": {
+      "version": 4,
+      "ihl": 5,
+      "tos": "0x6c",
+      "len": 436,
+      "id": 29476,
+      "flags": "DF",
+      "frag": 0,
+      "ttl": 64,
+      "proto": "tcp",
+      "chksum": "0x41fe",
+      "src": "192.168.1.100",
+      "dst": "192.168.1.1"
+    },
+    "TCP": {
+      "sport": "rockwell_encap",
+      "dport": 57017,
+      "seq": 3886980433,
+      "ack": 84908469,
+      "dataofs": 5,
+      "reserved": 0,
+      "flags": "PA",
+      "window": 8192,
+      "chksum": "0xc416",
+      "urgptr": 0,
+      "options": []
+    },
+    "ENIP_TCP": {
+      "command_id": "SendUnitData",
+      "length": 372,
+      "session": 1073850661,
+      "status": "success",
+      "sender_context": 0,
+      "options": 0
+    },
+    "ENIP_SendUnitData": {
+      "interface_handle": 0,
+      "timeout": 0,
+      "count": 2,
+      "items": [
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_address",
+            "length": 4,
+            "ENIP_ConnectionAddress": {
+              "connection_id": 2147548663
+            }
+          }
+        },
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_packet",
+            "length": 352,
+            "ENIP_ConnectionPacket": {
+              "sequence": 593,
+              "CIP": {
+                "direction": "response",
+                "service": "0x38",
+                "path": [],
+                "status": [],
+                "Raw": {
+                  "load": "b'\\x00\\x00\\x00\\x02\\x00\\x06\\x006\\x01\\xcc...'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Ethernet": {
+      "dst": "08:61:95:de:65:0d",
+      "src": "34:29:8f:70:75:96",
+      "type": "IPv4"
+    },
+    "IP": {
+      "version": 4,
+      "ihl": 5,
+      "tos": "0x0",
+      "len": 386,
+      "id": 49850,
+      "flags": "DF",
+      "frag": 0,
+      "ttl": 128,
+      "proto": "tcp",
+      "chksum": "0x0",
+      "src": "192.168.1.1",
+      "dst": "192.168.1.100"
+    },
+    "TCP": {
+      "sport": 57017,
+      "dport": "rockwell_encap",
+      "seq": 84908469,
+      "ack": 3886980829,
+      "dataofs": 5,
+      "reserved": 0,
+      "flags": "PA",
+      "window": 511,
+      "chksum": "0x852a",
+      "urgptr": 0,
+      "options": []
+    },
+    "ENIP_TCP": {
+      "command_id": "SendUnitData",
+      "length": 322,
+      "session": 1073850661,
+      "status": "success",
+      "sender_context": 0,
+      "options": 0
+    },
+    "ENIP_SendUnitData": {
+      "interface_handle": 0,
+      "timeout": 0,
+      "count": 2,
+      "items": [
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_address",
+            "length": 4,
+            "ENIP_ConnectionAddress": {
+              "connection_id": 4294595256
+            }
+          }
+        },
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_packet",
+            "length": 302,
+            "ENIP_ConnectionPacket": {
+              "sequence": 594,
+              "CIP": {
+                "direction": "request",
+                "service": "0x38",
+                "path": [],
+                "status": [],
+                "Raw": {
+                  "load": "b'\\x02 \\x02$\\x01\\x11\\x00...'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Ethernet": {
+      "dst": "08:61:95:de:65:0d",
+      "src": "34:29:8f:70:75:96",
+      "type": "IPv4"
+    },
+    "IP": {
+      "version": 4,
+      "ihl": 5,
+      "tos": "0x0",
+      "len": 152,
+      "id": 49848,
+      "flags": "DF",
+      "frag": 0,
+      "ttl": 128,
+      "proto": "tcp",
+      "chksum": "0x0",
+      "src": "192.168.1.1",
+      "dst": "192.168.1.100"
+    },
+    "TCP": {
+      "sport": 57017,
+      "dport": "rockwell_encap",
+      "seq": 84908357,
+      "ack": 3886980433,
+      "dataofs": 5,
+      "reserved": 0,
+      "flags": "PA",
+      "window": 513,
+      "chksum": "0x8440",
+      "urgptr": 0,
+      "options": []
+    },
+    "ENIP_TCP": {
+      "command_id": "SendUnitData",
+      "length": 88,
+      "session": 1073850661,
+      "status": "success",
+      "sender_context": 0,
+      "options": 0
+    },
+    "ENIP_SendUnitData": {
+      "interface_handle": 0,
+      "timeout": 0,
+      "count": 2,
+      "items": [
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_address",
+            "length": 4,
+            "ENIP_ConnectionAddress": {
+              "connection_id": 4294595256
+            }
+          }
+        },
+        {
+          "ENIP_SendUnitData_Item": {
+            "type_id": "conn_packet",
+            "length": 68,
+            "ENIP_ConnectionPacket": {
+              "sequence": 593,
+              "CIP": {
+                "direction": "request",
+                "service": "0x38",
+                "path": [],
+                "status": [],
+                "Raw": {
+                  "load": "b'\\x02 \\x02$\\x01\\x02...'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+]
