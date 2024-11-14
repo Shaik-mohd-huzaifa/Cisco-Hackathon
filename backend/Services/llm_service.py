@@ -6,13 +6,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOGETHER_AI_ENDPOINT = "https://api.together.xyz/v1"
-TOGETHER_AI_API_KEY = "bf5252e1770e8558b08dfd2952fa5a9d0e315b84e6b01ff405746d8a26c068b2"
-
 
 LLM = ChatOpenAI(
-    base_url=TOGETHER_AI_ENDPOINT,
-    api_key=TOGETHER_AI_API_KEY,
+    base_url=os.getenv("TOGETHER_AI_ENDPOINT"),
+    api_key=os.getenv("TOGETHER_AI_API_KEY"),
     model="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
     max_tokens=3000,
 )
